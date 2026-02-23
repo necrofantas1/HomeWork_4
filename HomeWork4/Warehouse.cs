@@ -7,10 +7,19 @@ public class Warehouse
     public string this[int index]
     {
         get { return _items[index]; }
-        set { _items[index] = value; }
+        set
+        {
+            _items[index] = value;
+            OnItemChanged?.Invoke(index, value);
+        }
     }
 
     public event Action<int, string> OnItemChanged;
+    
+    public void AddItem(string item)
+    {
+        
+    }
 }
 
     
