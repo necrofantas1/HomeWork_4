@@ -16,10 +16,6 @@ public class Warehouse
 
     public event Action<int, string> OnItemChanged;
     
-    public void AddItem(string item)
-    {
-        
-    }
 }
 
     
